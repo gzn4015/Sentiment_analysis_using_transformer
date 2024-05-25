@@ -191,7 +191,7 @@ if __name__ =="__main__":
     # 对训练集的每一行数据都应用分词器函数tokenize_text
     val_df['tokenized'] = val_df.apply(lambda row: tokenize_text(row, max_length), axis=1)
     # 对验证集的每一行数据都应用分词器函数tokenize_text
-    test_df['tokenized'] = val_df.apply(lambda row: tokenize_text(row, max_length), axis=1)
+    test_df['tokenized'] = test_df.apply(lambda row: tokenize_text(row, max_length), axis=1)
     # 对测试集的每一行数据都应用分词器函数tokenize_text
     print(train_df.head())
     print(train_df['tokenized'].head(10))
